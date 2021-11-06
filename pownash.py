@@ -1,7 +1,14 @@
 """Finds Nash equilibria for proof-of-work cryptocurrency."""
 
-REWARD = 100
-PLAYERS = 4
+import argparse
+
+parser = argparse.ArgumentParser(description='Finds Nash equilibria for proof-of-work cryptocurrency.')
+parser.add_argument('--players', type=int, default=2, help='Number of players')
+parser.add_argument('--reward', type=int, default=100, help='Block reward')
+args = parser.parse_args()
+
+PLAYERS = args.players
+REWARD = args.reward
 
 def profit_for_player(state, player):
     pow_power = sum(state)
