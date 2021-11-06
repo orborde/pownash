@@ -29,7 +29,8 @@ def evolve_state(state):
                 return new_state
     return state
 
-state = [1] * PLAYERS
+state = [0] * PLAYERS
+state[0]  = 1
 old_state = None
 
 while state != old_state:
