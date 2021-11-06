@@ -1,5 +1,3 @@
-"""Finds Nash equilibria for proof-of-work cryptocurrency."""
-
 import argparse
 
 parser = argparse.ArgumentParser(description='Finds Nash equilibria for proof-of-work cryptocurrency.')
