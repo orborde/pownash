@@ -17,7 +17,7 @@ def profit_for_player(state, player):
     return profit
 
 def player_moves(state, player):
-    if state[player] > 0:
+    if state[player] > 0 and sum(state) > 1:
         yield state[:player] + [state[player] - 1] + state[player + 1:]
     yield state[:player] + [state[player] + 1] + state[player + 1:]
 
